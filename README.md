@@ -1,5 +1,6 @@
 # Intelligent-bus-information-management-system
 Intelligent bus information management system
+
 ![image1](https://github.com/FourExplorers/Intelligent-bus-information-management-system/tree/master/picture/phone.png)
 
 许炳秋 3016218073
