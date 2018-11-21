@@ -9,6 +9,7 @@ Intelligent bus information management system
 <一>文档编写分工
 
 一、问题定义及可行性分析
+
 文健玮
 
 二、需求规格说明书
@@ -17,5 +18,5 @@ Intelligent bus information management system
 
 张凯炫: 1.简介、2.2.1.公司组织架构图、4.业务流程分析、5.5市民用例、6.1.系统架构需求
 
-李亚康: 2. 目标、涉众分析和范围、3.业务概念分析、5.4.经理用例\n
+李亚康: 2. 目标、涉众分析和范围、3.业务概念分析、5.4.经理用例
 
