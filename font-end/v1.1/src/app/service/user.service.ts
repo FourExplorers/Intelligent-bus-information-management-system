@@ -31,6 +31,7 @@ export class UserService {
   }
   createUser(user: User): Promise<User> {
     const url = `${this.api_url}`;
+    user.belongclass='driver';
     return this.http
       .post(url, JSON.stringify(user), { headers: this.headers })
       .toPromise()

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -7,6 +6,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
+  public options = {
+    spinable: true,
+    buttonWidth: 40,
+};
+
+public wings = [
+    {
+        'title': 'iPad',
+        'color': '#ea2a29',
+        'icon': {'name': 'fa fa-tablet'}
+    }, {
+        'title': 'iMac',
+        'color': '#f16729',
+        'icon': {'name': 'fa fa-laptop'}
+    }, {
+        'title': 'iPhone',
+        'color': '#f89322',
+        'icon': {'name': 'fa fa-mobile'}
+    }, {
+        'title': 'iWatch',
+        'color': '#ffcf14',
+        'icon': {'name': 'fa fa-clock-o'}
+    }
+];
+
+public gutter = {
+    top: 30,
+};
+
+public startAngles = {
+    topLeft: -20,
+}
   constructor() { }
 
   ngOnInit() {

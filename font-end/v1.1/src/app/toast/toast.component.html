@@ -1,0 +1,13 @@
+<div class="box">
+  <div class="toast-box">
+      <p class="toast-title">提示</p>
+      <div class="toast-content">
+          <ng-container *ngIf="toastParams.img">
+              <img src="{{toastParams.img}}" class="toast-content-img">
+          </ng-container>
+          <ng-container *ngIf="toastParams.title">
+              <p class="toast-content-p">{{toastParams.title}}</p>
+          </ng-container>
+      </div>
+  </div>
+</div>

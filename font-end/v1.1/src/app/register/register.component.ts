@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, Params} from '@angular/router'
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../domain/user';
 import { Auth } from '../domain/auth';
-import { UserService} from '../service/user.service'
+import { PopupService} from'../service/popup.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   password= "";
   us=new User();
   auth:Auth;
+  private popupSVC:PopupService;
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
@@ -40,6 +41,13 @@ export class RegisterComponent implements OnInit {
       }
     })
   }
+  /*test(){   
+    this.popupSVC.toast({
+        img: '弹出图片地址！',
+        title: '弹出消息内容！',
+        duration: 2000,  //toast多久后消失，默认为500ms
+    });
+}*/
   submitForm(){
     const credentials = this.authForm.value;
     if(this.authType==='login')
@@ -50,9 +58,6 @@ export class RegisterComponent implements OnInit {
         let redirectUrl = (auth.redirectUrl === null)? '': auth.redirectUrl;
         if(!auth.hasError){
           this.us = auth.user;
-          if(auth.redirectUrl==='')
-          {
-            
             console.log("cavadv");
             if(this.us.belongclass==="driver")
             {
@@ -64,17 +69,16 @@ export class RegisterComponent implements OnInit {
             }
             else if(this.us.belongclass==="manager")
             {
+              console.log('can to here')
               this.router.navigate(["/manager"]);
             }
             else 
             {
-              this.router.navigate([""]);
+              this.router.navigate([redirectUrl]);
             }
-          }
-          else{
-            this.router.navigate([redirectUrl]);
+          
              //this.router.navigate(["error"]);
-          }
+          
           //this.router.navigate([redirectUrl]);
           console.log(this.us.belongclass);
           console.log(auth.redirectUrl);
@@ -91,8 +95,7 @@ export class RegisterComponent implements OnInit {
       this.userservice.createUser(credentials).then(
         us=>{
           if(us){
-
-            this.router.navigateByUrl('');
+            this.router.navigateByUrl('login');
           }
         }
       )

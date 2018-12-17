@@ -28,6 +28,12 @@ import { MhsearchComponent } from './people/manager/mhsearch/mhsearch.component'
 import {HistoryService} from './service/history.service';
 import { MfindsubComponent } from './people/manager/mfindsub/mfindsub.component';
 import {MsubsubComponent }from './people/manager/msubsub/msubsub.component'
+import {DriverService } from './service/driver.service'
+import { PopupService } from './service/popup.service'
+import { ToastComponent } from './toast/toast.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,23 +52,27 @@ import {MsubsubComponent }from './people/manager/msubsub/msubsub.component'
     MhsearchComponent,
     MfindsubComponent,
     SearchMapComponent,
-    MsubsubComponent
+    MsubsubComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HomepageModule,
     CoreModule,
+    MatMenuModule,
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     Ng2SmartTableModule,
+    NoopAnimationsModule,
     AgmCoreModule.forRoot({
       // apiKey: 'AIzaSyAFgM81Qz-SwfTzUsr4F51AgDj0HdN88CQ' //Google API key for maps
        apiKey: 'AIzaSyDURIknn5X5lPJfiH55SbKm6WtPA7uGQvo'
-    })
+    }),
+    BrowserAnimationsModule
   ],
-  providers: [ApiService,SubmitService,HistoryService],
+  providers: [ApiService,SubmitService,HistoryService,DriverService,PopupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

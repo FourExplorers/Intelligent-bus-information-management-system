@@ -5,15 +5,15 @@
     margin-right: 10px;
     margin-top: 10px;
     display: inline-block;
-    background-color: #eee;
     border-radius: 4px; 
     cursor: pointer;
       position: relative;
-      padding: 0.5rem 1rem;
       padding-top: 0.5rem;
       padding-right: 1rem;
-      padding-bottom: 0.5rem;
       padding-left: 1rem;
+    display: block;
+    padding-top: .425rem;
+    padding-bottom: .425rem;
   }
 nav ul{
   list-style-type: none;
@@ -23,10 +23,12 @@ nav ul{
 }
 li{
   float:right;
+
 }
   nav a:visited,
   nav a:link {
-    color: #607D8B;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: "Source Sans Pro", sans-serif;
   }
 .extra{
   clear: both;
