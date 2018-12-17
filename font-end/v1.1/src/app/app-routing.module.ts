@@ -6,11 +6,14 @@ import { InitComponent}       from './first/init/init.component';
 import { AuthGuardService}    from './service/auth-guard.service';
 import { SearchNavBarComponent } from './people/search-nav-bar/search-nav-bar.component';
 import { MdsearchComponent} from './people/manager/mdsearch/mdsearch.component';
-import { BossComponent } from './people/boss/boss.component';
 import { ErrorComponent} from './error/error.component'
 import { DsearchComponent} from './people/driver/dsearch/dsearch.component'
 import { SearchComponent} from './people/citizen/search/search.component'
 import { SearchMapComponent } from './people/citizen/search-map/search-map.component'
+import {MhsearchComponent}   from './people/manager/mhsearch/mhsearch.component';
+import {MfindsubComponent}  from './people/manager/mfindsub/mfindsub.component';
+import { MsubsubComponent} from './people/manager/msubsub/msubsub.component';
+import {BosschangeComponent} from './people/boss/bosschange/bosschange.component'
 const routes: Routes = [
   {
      path: '',component: SearchNavBarComponent 
@@ -35,7 +38,7 @@ const routes: Routes = [
  },
  {
     path:'boss',
-    component:BossComponent,
+    component:BosschangeComponent,
  },
  {
    path:'error',
@@ -46,7 +49,10 @@ const routes: Routes = [
  },
  {
   path:'search1',component:SearchMapComponent
- }
+ },
+    {path: 'history', component: MhsearchComponent},
+    {path: 'submit', component:  MfindsubComponent},
+    {path: 'subsubmit', component: MsubsubComponent}
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

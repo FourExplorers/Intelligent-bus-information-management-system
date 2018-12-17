@@ -25,7 +25,7 @@
   /* headers grid color*/
   :host /deep/ ng2-smart-table thead > tr > th  { 
     border: 1px  grey;
-    background-color:#ddd9b0;
+    background-color:#c2f1db;
   } 
   
   /*font size*/

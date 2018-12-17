@@ -16,11 +16,18 @@ import { RegisterComponent } from './register/register.component';
 import { ErrorComponent } from './error/error.component'
 import { DsearchComponent } from './people/driver/dsearch/dsearch.component';
 import { MdsearchComponent} from './people/manager/mdsearch/mdsearch.component';
-import { BossComponent } from './people/boss/boss.component';
+import {SubmitService}  from './service/submit.service';
+import { BosschangeComponent } from './people/boss/bosschange/bosschange.component';
+import { BossnavbarComponent } from './people/boss/bossnavbar/bossnavbar.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SearchComponent} from './people/citizen/search/search.component'
 import { SearchMapComponent } from './people/citizen/search-map/search-map.component'
 import { AgmCoreModule } from '@agm/core';
+import { MsearchnavbarComponent } from './people/msearchnavbar/msearchnavbar.component';
+import { MhsearchComponent } from './people/manager/mhsearch/mhsearch.component';
+import {HistoryService} from './service/history.service';
+import { MfindsubComponent } from './people/manager/mfindsub/mfindsub.component';
+import {MsubsubComponent }from './people/manager/msubsub/msubsub.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +37,16 @@ import { AgmCoreModule } from '@agm/core';
     RegisterComponent,
     ErrorComponent,
     DsearchComponent,
-    BossComponent,
+    BossnavbarComponent,
     MdsearchComponent,
+    BosschangeComponent,
     SearchNavBarComponent,
     SearchComponent,
-    SearchMapComponent
+    MsearchnavbarComponent,
+    MhsearchComponent,
+    MfindsubComponent,
+    SearchMapComponent,
+    MsubsubComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +62,7 @@ import { AgmCoreModule } from '@agm/core';
        apiKey: 'AIzaSyDURIknn5X5lPJfiH55SbKm6WtPA7uGQvo'
     })
   ],
-  providers: [ApiService],
+  providers: [ApiService,SubmitService,HistoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,18 +4,34 @@ import { Headers } from '@angular/http';
 export class ApiService {
 
   constructor() { }
-  getUrl():string{
-    return 'http://localhost:3000';
+getUrl():string{
+    return 'http://localhost:3004';
 }
- getHeaders():Headers{
-    return new Headers({'Content-Type':'application/json'});
- }
- getLineUrl(): string {
-  return 'http://localhost:3002';
+getLineUrl(): string {
+  return 'http://localhost:3000';
 }
 
 getDriverUrl(): string{
 return 'http://localhost:3001';
+}
+
+getHistoryUrl(): string
+{ 
+return 'http://localhost:3002';
+
+}
+
+
+getSubmitUrl(): string
+{ 
+return 'http://localhost:3003';
+
+}
+
+
+
+getHeaders(): Headers {
+return new Headers({ 'Content-Type': 'application/json'});
 }
 }
 

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register.component';
-import { BossComponent } from '../people/boss/boss.component';
+import { BosschangeComponent } from '../people/boss/bosschange/bosschange.component';
 import { ErrorComponent} from '../error/error.component'
 const routes: Routes = [
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
      path:'boss',
-     component:BossComponent,
+     component:BosschangeComponent,
   },
   {
     path:'error',

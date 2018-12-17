@@ -1,0 +1,30 @@
+
+<h2> 您好！请提交你要修改的内容</h2>
+
+
+<div>
+  <label>提交ID号：</label>
+  <input [(ngModel)]="submit.id" >
+</div>
+<div>
+  <label>要减少数量的路线：</label>
+  <input [(ngModel)]="submit.subLine" >
+</div>
+<div>
+  <label>减少的数量：</label>
+  <input [(ngModel)]="submit.subNumber" >
+</div>
+<div>
+  <label>要增加数量的路线：</label>
+  <input [(ngModel)]="submit.addLine" >
+</div>
+<div>
+  <label>增加的数量：</label>
+  <input [(ngModel)]="submit.addNumber" >
+</div>
+
+
+
+<label>是否提交</label>
+<button (click)="onClick()"> 确认 </button>
+
