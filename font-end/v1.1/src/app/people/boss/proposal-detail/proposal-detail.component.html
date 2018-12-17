@@ -1,0 +1,28 @@
+<div *ngIf = "proposal">
+  <h2>{{proposal.name}}'s details</h2>
+  <div><label>id: </label>{{proposal.id}}</div>
+  <div>
+    <label>lineId: </label>
+    <input [(ngModel)] = "proposal.lineId" placeholder = "lineId" />
+  </div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)] = "proposal.name" placeholder = "name" />
+  </div>
+  <div>
+    <label>oldStations: </label>
+    <input [(ngModel)] = "proposal.oldStations" placeholder = "oldStations" />
+  </div>
+  <div>
+    <label>newStations: </label>
+    <input [(ngModel)] = "proposal.newStations" placeholder = "newStations" />
+  </div>
+  <div>
+    <label>reason: </label>
+    <input [(ngModel)] = "proposal.reason" placeholder = "reason" />
+  </div>
+  <button (click) = "goBack()">Back</button>
+  <button (click) = "save()">Save</button>
+  <button (click) = "accept()">Accept</button>
+  <button class = "reject" (click) = "reject(); $event.stopPropagation()">Reject</button>
+</div>

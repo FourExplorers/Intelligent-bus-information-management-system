@@ -34,6 +34,7 @@ import { ToastComponent } from './toast/toast.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
+import { ProposalsModule } from './people/boss/proposals.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +66,7 @@ import {MatMenuModule} from '@angular/material/menu';
     AppRoutingModule,
     ReactiveFormsModule,
     Ng2SmartTableModule,
+    ProposalsModule,
     NoopAnimationsModule,
     AgmCoreModule.forRoot({
       // apiKey: 'AIzaSyAFgM81Qz-SwfTzUsr4F51AgDj0HdN88CQ' //Google API key for maps

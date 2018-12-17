@@ -83,7 +83,7 @@ export class RegisterComponent implements OnInit {
           console.log(this.us.belongclass);
           console.log(auth.redirectUrl);
           localStorage.removeItem('redirectUrl');
-          //location.reload();
+          location.reload();
         } else {
           this.auth = Object.assign({}, auth);
         }

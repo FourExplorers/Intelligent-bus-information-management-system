@@ -10,15 +10,17 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    const divLogin = document.getElementById('Login');
+    const divLogin = document.getElementById('signin');
     const divLogout = document.getElementById('Logout');
+    const divreg = document.getElementById('Register');
+
     this.userId = -1;
     if(localStorage.getItem('userId') !== null){
      //已登录
-     //divLogin.style.display = 'none';
-
+     divLogin.style.display = 'none';
+     divreg.style.display = 'none';
      this.userId = <number><any>localStorage.getItem('userId');
-
+     
     }
     else{
       //未登录

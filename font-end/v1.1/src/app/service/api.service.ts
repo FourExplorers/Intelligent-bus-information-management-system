@@ -10,7 +10,9 @@ getUrl():string{
 getLineUrl(): string {
   return 'http://localhost:3000';
 }
-
+getProposalUrl(): string {
+  return 'http://localhost:3005';
+}
 getDriverUrl(): string{
 return 'http://localhost:3001';
 }

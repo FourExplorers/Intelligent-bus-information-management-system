@@ -13,7 +13,7 @@ import { SearchMapComponent } from './people/citizen/search-map/search-map.compo
 import {MhsearchComponent}   from './people/manager/mhsearch/mhsearch.component';
 import {MfindsubComponent}  from './people/manager/mfindsub/mfindsub.component';
 import { MsubsubComponent} from './people/manager/msubsub/msubsub.component';
-import {BosschangeComponent} from './people/boss/bosschange/bosschange.component'
+import {BossnavbarComponent} from './people/boss/bossnavbar/bossnavbar.component';
 const routes: Routes = [
   {
      path: '',component: SearchNavBarComponent 
@@ -38,7 +38,7 @@ const routes: Routes = [
  },
  {
     path:'boss',
-    component:BosschangeComponent,
+    component:BossnavbarComponent,
  },
  {
    path:'error',

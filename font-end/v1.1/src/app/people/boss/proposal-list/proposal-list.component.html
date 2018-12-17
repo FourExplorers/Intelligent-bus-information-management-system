@@ -1,0 +1,38 @@
+<h2>Create New Proposals</h2>>
+<div>
+  <label>LineId:</label> <input #proposalLineId />
+  <button (click) = "proposalLineId.value = ''">Clear</button>
+</div>
+<div>
+  <label>Name:</label> <input #proposalName />
+  <button (click) = "proposalName.value = ''">Clear</button>
+</div>
+<div>
+  <label>OldStations:</label> <input #proposalOldStations />
+  <button (click) = "proposalOldStations.value = ''">Clear</button>
+</div>
+<div>
+  <label>NewStations:</label> <input #proposalNewStations />
+  <button (click) = "proposalNewStations.value = ''">Clear</button>
+</div>
+<div>
+  <label>Reason:</label> <input #proposalReason />
+  <button (click) = "proposalReason.value = ''">Clear</button>
+</div>
+<div>
+  <button (click) = "add(proposalLineId.value, proposalName.value, proposalOldStations.value, proposalNewStations.value, proposalReason.value);">
+    Add
+  </button>
+</div>
+<hr>
+<h2>Proposal List</h2>
+<ul class = "proposals">
+  <li *ngFor = "let proposal of proposals"
+   [class.selected] = "proposal === selectedProposal"
+   (click) = "onSelect(proposal)" >
+    <span class = "badge">{{proposal.id}}</span>
+    <span>{{proposal.name}}</span>
+    <button class = "delete" (click) = "delete(proposal); $event.stopPropagation()">X</button>
+  </li>
+</ul>
+<!-- proposalId.value = ''; proposalLineID.value = ''; proposalName.value = ''; proposalNewStations.value = ''; proposalOldStations.value = ''; proposalReason.value = ''; -->
