@@ -1,7 +1,6 @@
-# Intelligent-bus-information-management-system
+﻿# Intelligent-bus-information-management-system
 Intelligent bus information management system
 
-![image1](https://github.com/FourExplorers/Intelligent-bus-information-management-system/tree/master/picture/phone.png)
 
 许炳秋 3016218073
 张凯炫 3016218077
@@ -37,3 +36,7 @@ Intelligent bus information management system
 张凯炫:3.3 风险分析、 4.测试方法
 
 李亚康:3.测试策略
+
+
+
+
