@@ -1,46 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { User} from '../domain/user'
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   //styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  public options = {
-    spinable: true,
-    buttonWidth: 40,
-};
-
-public wings = [
-    {
-        'title': 'iPad',
-        'color': '#ea2a29',
-        'icon': {'name': 'fa fa-tablet'}
-    }, {
-        'title': 'iMac',
-        'color': '#f16729',
-        'icon': {'name': 'fa fa-laptop'}
-    }, {
-        'title': 'iPhone',
-        'color': '#f89322',
-        'icon': {'name': 'fa fa-mobile'}
-    }, {
-        'title': 'iWatch',
-        'color': '#ffcf14',
-        'icon': {'name': 'fa fa-clock-o'}
-    }
-];
-
-public gutter = {
-    top: 30,
-};
-
-public startAngles = {
-    topLeft: -20,
-}
-  constructor() { }
+user:User;
+s:string;
+Userid:string;
+  constructor(@Inject('user')private service) { }
 
   ngOnInit() {
+      this.Userid = localStorage.getItem('userId');
+      console.log(this.Userid);
+      this.s='/'+localStorage.belongclass;
   }
+
 
 }

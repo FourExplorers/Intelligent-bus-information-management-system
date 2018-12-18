@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
             }
             else if(this.us.belongclass==="ceo")
             {
-              this.router.navigate(["/boss"]);
+              this.router.navigate(["/ceo"]);
             }
             else if(this.us.belongclass==="manager")
             {

@@ -1,14 +1,6 @@
 {
   "proposals": [
     {
-      "id": "1",
-      "lineId": "1",
-      "name": "the-Route-from-New-Campus-to-Old-Campus",
-      "oldStations": "New Campus -> 1 -> 2 -> 3 -> Old Campus",
-      "newStations": "New Campus -> 1 -> 4 -> 3 -> Old Campus",
-      "reason": "It takes less time to follow the new route rather than the old one"
-    },
-    {
       "id": "2",
       "lineId": "2",
       "name": "the-Route-from-Old-Campus-to-New-Campus",

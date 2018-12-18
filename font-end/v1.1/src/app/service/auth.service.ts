@@ -37,6 +37,7 @@ export class AuthService {
           auth.user = Object.assign({}, user);
           auth.hasError = false;
           localStorage.setItem('userId', user.id);
+          localStorage.setItem('belongclass',user.belongclass);
         } else {
           //密码错误
           //做出一些修改 添加一些信息

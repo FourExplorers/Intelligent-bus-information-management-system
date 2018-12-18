@@ -14,9 +14,15 @@ import {MhsearchComponent}   from './people/manager/mhsearch/mhsearch.component'
 import {MfindsubComponent}  from './people/manager/mfindsub/mfindsub.component';
 import { MsubsubComponent} from './people/manager/msubsub/msubsub.component';
 import {BossnavbarComponent} from './people/boss/bossnavbar/bossnavbar.component';
+import {ProposalListComponent} from './people/boss/proposal-list/proposal-list.component'
+import {ProposalDetailComponent} from './people/boss/proposal-detail/proposal-detail.component'
+import {MsearchnavbarComponent} from './people/msearchnavbar/msearchnavbar.component'
 const routes: Routes = [
   {
      path: '',component: SearchNavBarComponent 
+  },
+  {
+    path:'citizen',redirectTo:'',pathMatch:'full'
   },
   {
      path:'homepage',
@@ -34,15 +40,11 @@ const routes: Routes = [
  },
  {
    path:'manager',
-   component:MdsearchComponent,
+   component:MsearchnavbarComponent,
  },
  {
-    path:'boss',
+    path:'ceo',
     component:BossnavbarComponent,
- },
- {
-   path:'error',
-   component:ErrorComponent,
  },
  {
   path: 'search', component: SearchComponent
@@ -52,7 +54,17 @@ const routes: Routes = [
  },
     {path: 'history', component: MhsearchComponent},
     {path: 'submit', component:  MfindsubComponent},
-    {path: 'subsubmit', component: MsubsubComponent}
+    {path: 'subsubmit', component: MsubsubComponent},
+    { path: 'proposals', component: ProposalListComponent },
+    { path: 'proposal/:id', component: ProposalDetailComponent},
+    {
+      path:'##',
+      component:ErrorComponent,
+    },
+    {
+      path:'**',
+      component:ErrorComponent,
+     }
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

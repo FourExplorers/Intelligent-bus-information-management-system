@@ -24,6 +24,7 @@
                   placeholder="username"
                   class="form-control form-control-lg"
                   type="text" />
+                <label *ngIf="auth?.hasError">{{auth.errMsg}}</label>
               </fieldset>
               <fieldset class="form-group">
                 <input

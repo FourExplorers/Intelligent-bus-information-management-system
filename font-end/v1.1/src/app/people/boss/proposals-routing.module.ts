@@ -5,8 +5,8 @@ import { ProposalListComponent } from './proposal-list/proposal-list.component';
 import { ProposalDetailComponent } from './proposal-detail/proposal-detail.component';
 
 const routes: Routes = [
-  { path: 'proposals', component: ProposalListComponent },
-  { path: 'proposal/:id', component: ProposalDetailComponent }
+  { path: './proposals', component: ProposalListComponent },
+  { path: './proposal/:id', component: ProposalDetailComponent }
 ];
 
 @NgModule({
