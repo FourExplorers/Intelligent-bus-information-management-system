@@ -17,6 +17,7 @@ import {BossnavbarComponent} from './people/boss/bossnavbar/bossnavbar.component
 import {ProposalListComponent} from './people/boss/proposal-list/proposal-list.component'
 import {ProposalDetailComponent} from './people/boss/proposal-detail/proposal-detail.component'
 import {MsearchnavbarComponent} from './people/msearchnavbar/msearchnavbar.component'
+import {MsublineComponent}  from './people/manager/msubline/msubline.component';
 const routes: Routes = [
   {
      path:'',
@@ -58,6 +59,7 @@ const routes: Routes = [
  },
     {path: 'history', component: MhsearchComponent},
     {path: 'submit', component:  MfindsubComponent},
+    {path: 'submitLine', component:  MsublineComponent},
     {path: 'subsubmit', component: MsubsubComponent},
     { path: 'proposals', component: ProposalListComponent },
     { path: 'proposal/:id', component: ProposalDetailComponent},

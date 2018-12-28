@@ -17,6 +17,7 @@ import { ErrorComponent } from './error/error.component'
 import { DsearchComponent } from './people/driver/dsearch/dsearch.component';
 import { MdsearchComponent} from './people/manager/mdsearch/mdsearch.component';
 import {SubmitService}  from './service/submit.service';
+import {SubmitLineService} from './service/submit-line.service';
 import { BosschangeComponent } from './people/boss/bosschange/bosschange.component';
 import { BossnavbarComponent } from './people/boss/bossnavbar/bossnavbar.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
@@ -35,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import { ProposalsModule } from './people/boss/proposals.module';
+import { MsublineComponent } from './people/manager/msubline/msubline.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +57,7 @@ import { ProposalsModule } from './people/boss/proposals.module';
     SearchMapComponent,
     MsubsubComponent,
     ToastComponent,
+    MsublineComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,7 @@ import { ProposalsModule } from './people/boss/proposals.module';
     }),
     BrowserAnimationsModule
   ],
-  providers: [ApiService,SubmitService,HistoryService,DriverService,PopupService],
+  providers: [ApiService,SubmitService,SubmitLineService,HistoryService,DriverService,PopupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

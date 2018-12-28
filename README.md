@@ -5,7 +5,7 @@ Intelligent bus information management system
 许炳秋 3016218073
 张凯炫 3016218077
 李亚康 3016218059
-文健玮  30162180XX
+文健玮 30162180XX
 
 <一>文档编写分工
 
@@ -37,6 +37,12 @@ Intelligent bus information management system
 
 李亚康:3.测试策略
 
+五、编码与测试
 
+李亚康：登陆和注册界面，个人中心，权限控制
 
+张凯炫：司机界面，管理员界面
 
+许炳秋：经理界面，普通市民界面
+
+文健玮：部署

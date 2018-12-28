@@ -1,5 +1,5 @@
 export class Submit {
-    id : number;
+    id : string;
     subLine: string;
     subNumber : string;
     addLine: string;

@@ -12,11 +12,11 @@ export class MsubsubComponent implements OnInit {
 
  
   submit : Submit ={
-    id: 1,
-    subLine: "0",
-    subNumber: "0",
-    addLine: "0",
-    addNumber: "0"
+    id: '',
+    subLine: "",
+    subNumber: "",
+    addLine: "",
+    addNumber: ""
   };
   constructor(private submitService: SubmitService) { }
 
@@ -27,5 +27,15 @@ export class MsubsubComponent implements OnInit {
     console.log("ok");
      var a = 1;
      this.submitService.createSubmit(this.submit).then(dri => this.submit=dri);
+   
+  }
+
+  onClear(): void {
+    this.submit.id = null;
+    this.submit.subLine = null;
+    this.submit.subNumber = null;
+    this.submit.addLine = null;
+    this.submit.addNumber = null;
+
   }
 }
