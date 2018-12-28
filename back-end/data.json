@@ -51,39 +51,11 @@
       "id": 8
     },
     {
-      "username": "lyk",
-      "password": "lyk666",
-      "name": "lyk",
+      "username": "zkx",
+      "password": "zkx",
+      "name": "zkx",
       "belongclass": "driver",
       "id": 9
-    },
-    {
-      "username": "llll",
-      "password": "lllllll",
-      "name": "lll",
-      "belongclass": "driver",
-      "id": 10
-    },
-    {
-      "username": "guanliyuan",
-      "password": "guanliyuan",
-      "name": "aaa",
-      "belongclass": "ceo",
-      "id": 11
-    },
-    {
-      "username": "jingli",
-      "password": "jingli",
-      "name": "jingli",
-      "belongclass": "manager",
-      "id": 12
-    },
-    {
-      "username": "putong",
-      "password": "putong",
-      "name": "putong",
-      "belongclass": "driver",
-      "id": 13
     }
   ]
 }
