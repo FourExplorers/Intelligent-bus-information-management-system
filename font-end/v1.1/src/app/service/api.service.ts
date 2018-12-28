@@ -5,28 +5,28 @@ export class ApiService {
 
   constructor() { }
 getUrl():string{
-    return 'http://localhost:3004';
+    return 'http://39.96.56.149:3004';
 }
 getLineUrl(): string {
-  return 'http://localhost:3000';
+  return 'http://39.96.56.149:3000';
 }
 getProposalUrl(): string {
-  return 'http://localhost:3005';
+  return 'http://39.96.56.149:3005';
 }
 getDriverUrl(): string{
-return 'http://localhost:3001';
+return 'http://39.96.56.149:3001';
 }
 
 getHistoryUrl(): string
 { 
-return 'http://localhost:3002';
+return 'http://39.96.56.149:3002';
 
 }
 
 
 getSubmitUrl(): string
 { 
-return 'http://localhost:3003';
+return 'http://39.96.56.149:3003';
 
 }
 
