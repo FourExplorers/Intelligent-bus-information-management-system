@@ -1,0 +1,39 @@
+
+<h2> 您好！请提交你要修改的内容</h2>
+
+
+<div>
+  <label>提交ID号：</label>
+  <input [(ngModel)]="submit.id" >
+</div>
+<div>
+  <label>要更改的路线ID：</label>
+  <input [(ngModel)]="submit.lineId" >
+</div>
+<div>
+  <label>name：</label>
+  <input [(ngModel)]="submit.name" >
+</div>
+<div>
+  <label>原来的站台：</label>
+  <input [(ngModel)]="submit.oldStations" >
+</div>
+<div>
+  <label>新的站台：</label>
+  <input [(ngModel)]="submit.newStations" >
+</div>
+<div>
+  <label>原因：</label>
+  <input [(ngModel)]="submit.reason" >
+</div>
+
+<p>
+<label>是否提交</label>
+<button (click)="onClick()"> 确认 </button>
+</p>
+
+<p>
+  <label>清空</label>
+  <button (click)="onClear()"> clear </button>
+  </p>
+  

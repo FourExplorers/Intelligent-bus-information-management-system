@@ -7,6 +7,22 @@
       "oldStations": "Old Campus -> 3 -> 2 -> 1 -> New Campus",
       "newStations": "Old Campus -> 3 -> 4 -> 1 -> New Campus",
       "reason": "It takes less time to follow the new route rather than the old one"
+    },
+    {
+      "id": "4",
+      "lineId": "4",
+      "name": "4",
+      "oldStations": "4",
+      "newStations": "4",
+      "reason": "4"
+    },
+    {
+      "id": "5",
+      "lineId": "5",
+      "name": "5",
+      "oldStations": "5",
+      "newStations": "5",
+      "reason": "5"
     }
   ]
 }
