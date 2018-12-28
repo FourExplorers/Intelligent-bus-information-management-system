@@ -29,9 +29,9 @@ export class UserService {
       })
       .catch(this.handleError);
   }
-  createUser(user: User): Promise<User> {
+  createUser(user: User,belong): Promise<User> {
     const url = `${this.api_url}`;
-    user.belongclass='driver';
+    user.belongclass=belong
     return this.http
       .post(url, JSON.stringify(user), { headers: this.headers })
       .toPromise()

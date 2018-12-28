@@ -15,6 +15,7 @@ Userid:string;
       this.Userid = localStorage.getItem('userId');
       console.log(this.Userid);
       this.s='/'+localStorage.belongclass;
+      
   }
 
 

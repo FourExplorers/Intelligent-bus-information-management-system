@@ -4,6 +4,7 @@ import { Http, Headers, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { Auth } from '../domain/auth';
 import { User } from '../domain/user';
+import { copyStyles } from '@angular/animations/browser/src/util';
 
 @Injectable()
 export class AuthService {
@@ -39,6 +40,8 @@ export class AuthService {
           localStorage.setItem('userId', user.id);
           localStorage.setItem('belongclass',user.belongclass);
         } else {
+          console.log(us.password);
+          console.log(user.password);
           //密码错误
           //做出一些修改 添加一些信息
           auth.hasError = true;

@@ -20,7 +20,6 @@ export class NavbarComponent implements OnInit {
      divLogin.style.display = 'none';
      divreg.style.display = 'none';
      this.userId = <number><any>localStorage.getItem('userId');
-     
     }
     else{
       //未登录

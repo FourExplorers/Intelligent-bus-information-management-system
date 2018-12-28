@@ -19,15 +19,16 @@ import {ProposalDetailComponent} from './people/boss/proposal-detail/proposal-de
 import {MsearchnavbarComponent} from './people/msearchnavbar/msearchnavbar.component'
 const routes: Routes = [
   {
-     path: '',component: SearchNavBarComponent 
+     path:'',
+     component: SearchNavBarComponent
+  },
+  {
+    path:'homepage',
+    canActivate: [AuthGuardService],
+    loadChildren:'./homepage/homepage.module#HomepageModule'      
   },
   {
     path:'citizen',redirectTo:'',pathMatch:'full'
-  },
-  {
-     path:'homepage',
-     canActivate: [AuthGuardService],
-     loadChildren:'./homepage/homepage.module#HomepageModule'      
   },
   {
    path:'register',component:RegisterComponent
@@ -36,15 +37,18 @@ const routes: Routes = [
    path:'login',component:RegisterComponent
  },
  {
-    path:'driver',component:DsearchComponent
+    path:'driver',component:DsearchComponent,
+    canActivate: [AuthGuardService]
  },
  {
    path:'manager',
    component:MsearchnavbarComponent,
+   canActivate: [AuthGuardService]
  },
  {
     path:'ceo',
     component:BossnavbarComponent,
+    canActivate: [AuthGuardService]
  },
  {
   path: 'search', component: SearchComponent

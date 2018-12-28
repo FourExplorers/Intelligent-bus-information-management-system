@@ -1,4 +1,4 @@
-import { Component, OnInit,  Inject } from '@angular/core';
+import { Component, OnInit,  Inject} from '@angular/core';
 import { Router, ActivatedRoute, Params} from '@angular/router' 
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../domain/user';
@@ -91,11 +91,23 @@ export class RegisterComponent implements OnInit {
     }
     else if(this.authType==='register')
     {
-      
-      this.userservice.createUser(credentials).then(
+      var person ;
+      if(localStorage.getItem('belongclass')=='manager')
+      {
+        person = 'driver';
+      }
+      else if(localStorage.getItem('belongclass')=='ceo')
+      {
+        person = 'manager';
+      }
+      else
+      {
+        person = 'citizen';
+      }
+      this.userservice.createUser(credentials,person).then(
         us=>{
           if(us){
-            this.router.navigateByUrl('login');
+            this.router.navigateByUrl('homepage');
           }
         }
       )
