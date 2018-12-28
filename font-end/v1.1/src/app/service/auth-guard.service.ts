@@ -37,6 +37,9 @@ export class AuthGuardService implements CanActivate {
            {
             return true;
            }
+      else if(localStorage.getItem("belongclass")=='manager'&&url=='/driver'){
+             return true;
+      }
       else {
         this.router.navigate(['/'+localStorage.getItem("belongclass")]);
       }
