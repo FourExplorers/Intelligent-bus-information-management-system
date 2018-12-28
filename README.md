@@ -39,7 +39,8 @@ Intelligent bus information management system
 
 五、编码与测试
 
+李亚康：登陆和注册界面，个人中心，权限控制
 
+张凯炫：司机界面，管理员界面
 
-
-
+许炳秋：经理界面，普通市民界面
